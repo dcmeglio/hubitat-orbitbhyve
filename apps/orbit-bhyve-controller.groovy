@@ -342,7 +342,7 @@ def updateTiles(data) {
                         def msgList = []
                         def start_timesList = []
                         def freqMsg
-                        stp.findAll{it.enabled.toBoolean()}.each {
+                        stp.findAll{it.enabled?.toBoolean()}.each {
                             def y = it.run_times.findAll{it.station == station}
                             start_timesList = []
                             if (y) {
