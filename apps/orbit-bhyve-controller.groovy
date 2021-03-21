@@ -186,6 +186,7 @@ def refresh() {
 def main() {
     infoVerbose "Executing Main Routine at ${timestamp()}"
     def data = OrbitGet("devices")
+    log.debug data
     if (data) 
         updateTiles(data)
 }
